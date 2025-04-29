@@ -1,0 +1,373 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilos del login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2a2a2a;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    background-color: #44ff44;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #55ee55;
+}
+
+/* Estilos del encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2a2a2a;
+}
+
+.header .status-card h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#module-status, #user-info {
+    font-size: 14px;
+}
+
+.header img {
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Paneles laterales */
+.left-panel, .right-panel {
+    width: 250px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.center-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sección de módulos */
+.modules {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.modules h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.module-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.module-buttons button {
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.module-buttons button img {
+    width: 100px;
+    height: 50px;
+}
+
+.module-buttons button:hover {
+    background-color: #ff4444;
+}
+
+.module-buttons button.active {
+    background-color: #44ff44;
+}
+
+/* Acciones del módulo */
+.module-actions {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.module-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.module-actions .apply {
+    background-color: #44ff44;
+}
+
+.module-actions .cancel {
+    background-color: #ff4444;
+}
+
+/* Reproductor */
+.player {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.player-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.player-tabs button {
+    background-color: #444;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.player-tabs button:hover {
+    background-color: #555;
+}
+
+.player-tabs button.active {
+    background-color: #666;
+}
+
+.add-camera {
+    background-color: #44ff44;
+    margin-left: auto;
+}
+
+.add-camera:hover {
+    background-color: #55ee55;
+}
+
+.video-container {
+    width: 640px;
+    height: 480px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+#video-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Configuraciones y detecciones */
+.configurations, .detections, .events {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.configurations h2, .detections h2, .events h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.configurations ul, .detections ul {
+    list-style: none;
+}
+
+.configurations ul li, .detections ul li {
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.configurations ul li input[type="checkbox"],
+.detections ul li input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.configurations ul li input[type="checkbox"]:checked,
+.detections ul li input[type="checkbox"]:checked {
+    background-color: #44ff44;
+    border-color: #44ff44;
+}
+
+.detections details {
+    margin-bottom: 5px;
+}
+
+.detections summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.detections details ul {
+    padding-left: 20px;
+}
+
+/* Botones de configuración para Áreas Restringidas */
+.configurations ul li button.config-button {
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.configurations ul li button.config-button:hover {
+    background-color: #555;
+}
+
+/* Eventos */
+.events .events-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.events ul li {
+    padding: 10px;
+    background-color: #444;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.events ul li:hover {
+    background-color: #555;
+}
+
+.clear-events {
+    background-color: #ff4444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilos para áreas 
+.area-overlay.area-1 {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.area-overlay.area-2 {
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+#temp-area {
+    opacity: 0.5;
+}*/
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+
+    .center-panel {
+        width: 100%;
+    }
+
+    .video-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .player-tabs {
+        flex-wrap: wrap;
+    }
+
+    .module-buttons button img {
+        width: 50px;
+        height: 25px;
+    }
+}

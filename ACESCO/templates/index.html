@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección Modular con IA</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="login-button">Ingresar</button>
+        <p id="login-error" style="color: #ff4444; display: none;"></p>
+    </div>
+
+    <div class="main-container" id="main-container" style="display: none;">
+        <div class="header">
+            <div class="status-card">
+                <h1>Detección Modular con IA</h1>
+                <div id="module-status">Ningún módulo activo | Modelo: Inactivo</div>
+                <div id="user-info">Usuario: <span id="username-display"></span> | Rol: <span id="role-display"></span></div>
+            </div>
+            <img src="static/img/indutronica.jpeg" alt="Logo">
+        </div>
+
+        <div class="container">
+            <div class="left-panel">
+                <div class="modules">
+                    <h2>Módulos</h2>
+                    <div class="module-buttons">
+                        <button data-module="Acciones Inseguras"><img src="static/img/Img Acciones Inseguras.png"> Acciones Inseguras ⚠️</button>
+                        <button data-module="Temperatura"><img src="static/img/Img Temperatura.png"> Temperatura 🌡️</button>
+                        <button data-module="EPP's"><img src="static/img/Img Epps.png"> EPP's 🧤</button>
+                        <button data-module="Áreas Restringidas"><img src="static/img/Img Areas Restringidas.png"> Áreas Restringidas 🔒</button>
+                    </div>
+                </div>
+                <div class="module-actions">
+                    <button class="apply">Aplicar Módulo</button>
+                    <button class="cancel">Cancelar Módulo</button>
+                </div>
+                <div class="configurations">
+                    <h2 id="config-title">Configuraciones</h2>
+                    <ul id="config-list"></ul>
+                </div>
+            </div>
+
+            <div class="center-panel">
+                <div class="player">
+                    <div class="player-tabs">
+                        <button data-camera="1" class="active" style="width: 100px; height: 50px;">Cam 1</button>
+                        <button data-camera="2" style="width: 100px; height: 50px;">Cam 2</button>
+                        <button id="add-camera" class="add-camera" style="width: 50px; height: 30px;">+</button>
+                    </div>
+                    <div class="video-container">
+                        <img id="video-stream" src="/video_feed?camera=1" alt="Video Stream">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="detections">
+                    <h2>Detecciones</h2>
+                    <ul id="detections-list"></ul>
+                </div>
+                <div class="events">
+                    <h2>Eventos</h2>
+                    <div class="events-container">
+                        <ul id="events-list"></ul>
+                    </div>
+                    <button class="clear-events">Borrar Eventos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
